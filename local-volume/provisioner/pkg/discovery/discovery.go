@@ -23,9 +23,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/golang/glog"
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/common"
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/metrics"
+	glog "k8s.io/klog"
 
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/deleter"
 	esUtil "github.com/kubernetes-sigs/sig-storage-lib-external-provisioner/util"

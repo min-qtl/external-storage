@@ -28,7 +28,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	utilfile "k8s.io/kubernetes/pkg/util/file"
 )

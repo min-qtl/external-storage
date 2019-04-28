@@ -21,7 +21,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/cache"
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/common"

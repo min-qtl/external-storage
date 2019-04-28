@@ -20,7 +20,7 @@ import (
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/openstack"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // NewNetworkV2 creates a new Network V2 endpoint

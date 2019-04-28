@@ -41,13 +41,13 @@ import (
 	"k8s.io/kubernetes/pkg/volume"
 
 	"cloud.google.com/go/compute/metadata"
-	"github.com/golang/glog"
 	"github.com/kubernetes-incubator/external-storage/snapshot/pkg/cloudprovider"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	compute "google.golang.org/api/compute/v1"
 	container "google.golang.org/api/container/v1"
 	"google.golang.org/api/googleapi"
+	glog "k8s.io/klog"
 	"k8s.io/kubernetes/pkg/kubelet/apis"
 )
 

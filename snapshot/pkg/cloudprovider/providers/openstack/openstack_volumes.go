@@ -29,7 +29,7 @@ import (
 	volumesV2 "github.com/gophercloud/gophercloud/openstack/blockstorage/v2/volumes"
 	"github.com/gophercloud/gophercloud/openstack/compute/v2/extensions/volumeattach"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 type volumeService interface {

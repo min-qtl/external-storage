@@ -22,8 +22,8 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/golang/glog"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp"
+	glog "k8s.io/klog"
 
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"

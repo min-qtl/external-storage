@@ -24,7 +24,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	crdv1 "github.com/kubernetes-incubator/external-storage/snapshot/pkg/apis/crd/v1"
 )

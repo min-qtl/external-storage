@@ -24,7 +24,7 @@ import (
 
 	"os"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const (

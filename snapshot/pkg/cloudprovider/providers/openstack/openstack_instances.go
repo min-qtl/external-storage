@@ -19,11 +19,11 @@ package openstack
 import (
 	"errors"
 
-	"github.com/golang/glog"
 	"github.com/gophercloud/gophercloud"
 	"github.com/gophercloud/gophercloud/openstack/compute/v2/servers"
 	"github.com/gophercloud/gophercloud/pagination"
 	"k8s.io/api/core/v1"
+	glog "k8s.io/klog"
 
 	"github.com/kubernetes-incubator/external-storage/snapshot/pkg/cloudprovider"
 	"k8s.io/apimachinery/pkg/types"

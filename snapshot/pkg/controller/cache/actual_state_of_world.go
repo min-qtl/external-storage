@@ -23,8 +23,8 @@ package cache
 import (
 	"sync"
 
-	"github.com/golang/glog"
 	crdv1 "github.com/kubernetes-incubator/external-storage/snapshot/pkg/apis/crd/v1"
+	glog "k8s.io/klog"
 )
 
 // ActualStateOfWorld defines a set of thread-safe operations supported on

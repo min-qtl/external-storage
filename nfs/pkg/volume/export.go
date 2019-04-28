@@ -24,9 +24,9 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/golang/glog"
 	"github.com/guelfey/go.dbus"
 	"k8s.io/api/core/v1"
+	glog "k8s.io/klog"
 )
 
 type exporter interface {

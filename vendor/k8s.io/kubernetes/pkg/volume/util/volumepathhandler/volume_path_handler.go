@@ -23,7 +23,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	"k8s.io/apimachinery/pkg/types"
 )

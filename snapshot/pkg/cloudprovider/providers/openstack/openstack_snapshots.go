@@ -22,8 +22,8 @@ import (
 	"github.com/gophercloud/gophercloud"
 	snapshotsV2 "github.com/gophercloud/gophercloud/openstack/blockstorage/v2/snapshots"
 
-	"github.com/golang/glog"
 	ctrlsnap "github.com/kubernetes-incubator/external-storage/snapshot/pkg/controller/snapshotter"
+	glog "k8s.io/klog"
 )
 
 // SnapshotsV2 is the Cinder V2 Snapshot service from gophercloud

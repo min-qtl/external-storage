@@ -17,8 +17,8 @@ limitations under the License.
 package aws
 
 import (
-	"github.com/golang/glog"
 	"k8s.io/apimachinery/pkg/util/sets"
+	glog "k8s.io/klog"
 	awscredentialprovider "k8s.io/kubernetes/pkg/credentialprovider/aws"
 	"sync"
 )

@@ -21,7 +21,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/golang/glog"
 	"github.com/kubernetes-incubator/external-storage/nfs/pkg/server"
 	vol "github.com/kubernetes-incubator/external-storage/nfs/pkg/volume"
 	"github.com/kubernetes-sigs/sig-storage-lib-external-provisioner/controller"
@@ -31,6 +30,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
 	"k8s.io/client-go/tools/clientcmd"
+	glog "k8s.io/klog"
 )
 
 var (

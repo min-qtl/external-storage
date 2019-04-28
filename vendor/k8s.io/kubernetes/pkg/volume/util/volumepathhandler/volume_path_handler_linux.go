@@ -25,7 +25,7 @@ import (
 	"os/exec"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // AttachFileDevice takes a path to a regular file and makes it available as an

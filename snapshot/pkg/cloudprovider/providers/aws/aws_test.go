@@ -27,10 +27,10 @@ import (
 	"github.com/aws/aws-sdk-go/service/elb"
 
 	"github.com/aws/aws-sdk-go/service/autoscaling"
-	"github.com/golang/glog"
 	"k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
+	glog "k8s.io/klog"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

@@ -18,7 +18,7 @@ package aws
 
 import (
 	"github.com/aws/aws-sdk-go/aws/request"
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // Handler for aws-sdk-go that logs all requests

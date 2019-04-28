@@ -23,7 +23,7 @@ import (
 	"fmt"
 	"path/filepath"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"k8s.io/utils/exec"
 )
 

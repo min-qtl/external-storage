@@ -27,7 +27,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"k8s.io/kubernetes/pkg/util/mount"
 	"k8s.io/utils/exec"
 )

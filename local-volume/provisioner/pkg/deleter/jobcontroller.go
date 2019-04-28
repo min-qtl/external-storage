@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/golang/glog"
 	"github.com/kubernetes-incubator/external-storage/local-volume/provisioner/pkg/common"
+	glog "k8s.io/klog"
 
 	batch_v1 "k8s.io/api/batch/v1"
 	apiv1 "k8s.io/api/core/v1"

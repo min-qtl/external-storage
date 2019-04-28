@@ -25,11 +25,11 @@ import (
 	"os"
 	"time"
 
-	"github.com/golang/glog"
 	mayav1 "github.com/kubernetes-incubator/external-storage/openebs/types/v1"
 	yaml "gopkg.in/yaml.v2"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
+	glog "k8s.io/klog"
 )
 
 const (
