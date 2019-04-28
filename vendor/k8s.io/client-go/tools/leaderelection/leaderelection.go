@@ -60,7 +60,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	rl "k8s.io/client-go/tools/leaderelection/resourcelock"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const (

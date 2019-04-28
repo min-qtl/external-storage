@@ -28,7 +28,7 @@ import (
 	"k8s.io/client-go/util/buffer"
 	"k8s.io/client-go/util/retry"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // SharedInformer has a shared data cache and is capable of distributing notifications for changes

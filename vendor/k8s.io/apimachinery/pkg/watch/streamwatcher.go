@@ -20,7 +20,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/net"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"

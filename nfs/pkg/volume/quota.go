@@ -27,8 +27,8 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/golang/glog"
 	"github.com/kubernetes-sigs/sig-storage-lib-external-provisioner/mount"
+	glog "k8s.io/klog"
 )
 
 type quotaer interface {

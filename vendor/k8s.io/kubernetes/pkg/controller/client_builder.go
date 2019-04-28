@@ -38,7 +38,7 @@ import (
 	api "k8s.io/kubernetes/pkg/apis/core"
 	"k8s.io/kubernetes/pkg/serviceaccount"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // ControllerClientBuilder allows you to get clients and configs for controllers

@@ -17,7 +17,7 @@ limitations under the License.
 package cache
 
 import (
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"

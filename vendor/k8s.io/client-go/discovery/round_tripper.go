@@ -20,7 +20,7 @@ import (
 	"net/http"
 	"path/filepath"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"github.com/gregjones/httpcache"
 	"github.com/gregjones/httpcache/diskcache"
 	"github.com/peterbourgon/diskv"

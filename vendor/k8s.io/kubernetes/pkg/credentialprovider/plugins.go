@@ -21,7 +21,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // All registered credential providers.

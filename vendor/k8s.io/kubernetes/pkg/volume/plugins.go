@@ -22,7 +22,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	authenticationv1 "k8s.io/api/authentication/v1"
 	"k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"

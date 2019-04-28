@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	restclient "k8s.io/client-go/rest"
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"

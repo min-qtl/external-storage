@@ -51,7 +51,7 @@ import (
 	hashutil "k8s.io/kubernetes/pkg/util/hash"
 	taintutils "k8s.io/kubernetes/pkg/util/taints"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const (

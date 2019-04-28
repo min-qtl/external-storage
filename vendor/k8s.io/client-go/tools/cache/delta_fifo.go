@@ -23,7 +23,7 @@ import (
 
 	"k8s.io/apimachinery/pkg/util/sets"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // NewDeltaFIFO returns a Store which can be used process changes to items.

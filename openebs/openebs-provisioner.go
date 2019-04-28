@@ -24,7 +24,6 @@ import (
 
 	"syscall"
 
-	"github.com/golang/glog"
 	mApiv1 "github.com/kubernetes-incubator/external-storage/openebs/pkg/v1"
 	mayav1 "github.com/kubernetes-incubator/external-storage/openebs/types/v1"
 	"github.com/kubernetes-sigs/sig-storage-lib-external-provisioner/controller"
@@ -34,6 +33,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
+	glog "k8s.io/klog"
 )
 
 const (

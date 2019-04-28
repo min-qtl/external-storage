@@ -33,7 +33,7 @@ import (
 	"k8s.io/apimachinery/pkg/util/json"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // UnstructuredConverter is an interface for converting between interface{}

@@ -27,7 +27,7 @@ import (
 	goruntime "runtime"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"github.com/imdario/mergo"
 
 	"k8s.io/apimachinery/pkg/runtime"

@@ -27,7 +27,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // DockerConfigJson represents ~/.docker/config.json file info

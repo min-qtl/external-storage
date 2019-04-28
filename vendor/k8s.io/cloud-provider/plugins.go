@@ -22,7 +22,7 @@ import (
 	"os"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // Factory is a function that returns a cloudprovider.Interface.

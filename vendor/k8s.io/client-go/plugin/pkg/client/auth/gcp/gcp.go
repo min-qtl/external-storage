@@ -27,7 +27,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/google"
 	"k8s.io/apimachinery/pkg/util/net"

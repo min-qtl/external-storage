@@ -24,7 +24,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"github.com/imdario/mergo"
 
 	restclient "k8s.io/client-go/rest"

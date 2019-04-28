@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // DockerConfigProvider is the interface that registered extensions implement

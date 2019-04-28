@@ -21,7 +21,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	apiserverserviceaccount "k8s.io/apiserver/pkg/authentication/serviceaccount"
 	"k8s.io/kubernetes/pkg/apis/core"
 

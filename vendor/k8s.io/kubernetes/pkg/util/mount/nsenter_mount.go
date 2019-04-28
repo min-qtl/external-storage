@@ -25,7 +25,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"golang.org/x/sys/unix"
 	utilfile "k8s.io/kubernetes/pkg/util/file"
 	"k8s.io/kubernetes/pkg/util/nsenter"

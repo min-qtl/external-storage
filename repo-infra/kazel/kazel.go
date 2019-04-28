@@ -33,7 +33,7 @@ import (
 	"go/path/filepath"
 
 	bzl "github.com/bazelbuild/buildifier/core"
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const (

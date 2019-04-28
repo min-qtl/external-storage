@@ -21,7 +21,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 
 	clientcmdapi "k8s.io/client-go/tools/clientcmd/api"
 )

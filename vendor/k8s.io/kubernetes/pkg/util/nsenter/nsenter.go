@@ -28,7 +28,7 @@ import (
 
 	"k8s.io/utils/exec"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const (

@@ -24,7 +24,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"github.com/spf13/pflag"
 )
 

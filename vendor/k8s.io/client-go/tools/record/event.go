@@ -33,7 +33,7 @@ import (
 
 	"net/http"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 const maxTriesPerEvent = 12

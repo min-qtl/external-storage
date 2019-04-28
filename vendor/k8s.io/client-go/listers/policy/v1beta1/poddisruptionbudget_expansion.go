@@ -19,7 +19,7 @@ package v1beta1
 import (
 	"fmt"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"k8s.io/api/core/v1"
 	policy "k8s.io/api/policy/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"

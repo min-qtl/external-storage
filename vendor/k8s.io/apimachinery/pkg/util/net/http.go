@@ -31,7 +31,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"golang.org/x/net/http2"
 )
 

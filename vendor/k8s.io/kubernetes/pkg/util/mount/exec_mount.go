@@ -22,7 +22,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // ExecMounter is a mounter that uses provided Exec interface to mount and

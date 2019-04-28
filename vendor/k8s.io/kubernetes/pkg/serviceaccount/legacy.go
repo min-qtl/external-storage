@@ -24,7 +24,7 @@ import (
 	"k8s.io/api/core/v1"
 	apiserverserviceaccount "k8s.io/apiserver/pkg/authentication/serviceaccount"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"gopkg.in/square/go-jose.v2/jwt"
 )
 

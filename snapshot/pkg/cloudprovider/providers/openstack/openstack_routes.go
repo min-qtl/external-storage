@@ -24,9 +24,9 @@ import (
 	"github.com/gophercloud/gophercloud/openstack/networking/v2/extensions/layer3/routers"
 	neutronports "github.com/gophercloud/gophercloud/openstack/networking/v2/ports"
 
-	"github.com/golang/glog"
 	"github.com/kubernetes-incubator/external-storage/snapshot/pkg/cloudprovider"
 	"k8s.io/apimachinery/pkg/types"
+	glog "k8s.io/klog"
 )
 
 // ErrNoRouterID is the error for no router ID

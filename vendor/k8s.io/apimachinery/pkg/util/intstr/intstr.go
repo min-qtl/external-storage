@@ -25,7 +25,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 	"github.com/google/gofuzz"
 )
 

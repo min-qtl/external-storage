@@ -22,7 +22,7 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/golang/glog"
+	glog "k8s.io/klog"
 )
 
 // FakeMounter implements mount.Interface for tests.
