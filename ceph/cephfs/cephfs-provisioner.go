@@ -90,7 +90,7 @@ func (p *cephFSProvisioner) Provision(options controller.VolumeOptions) (*v1.Per
 		"CEPH_MON=" + strings.Join(mon[:], ","),
 		"CEPH_AUTH_ID=" + adminID,
 		"CEPH_AUTH_KEY=" + adminSecret}
-
+        glog.Infof("cmd env %s",cmd.Env)
 	output, cmdErr := cmd.CombinedOutput()
 	if cmdErr != nil {
 		glog.Errorf("failed to provision share %q for %q, err: %v, output: %v", share, user, cmdErr, string(output))
@@ -102,6 +102,7 @@ func (p *cephFSProvisioner) Provision(options controller.VolumeOptions) (*v1.Per
 	if res.User == "" || res.Secret == "" || res.Path == "" {
 		return nil, fmt.Errorf("invalid provisioner output")
 	}
+        glog.Infof("provisionOutput %s",output)
 	// create secret in PVC's namespace
 	nameSpace := options.PVC.Namespace
 	secretName := "ceph-" + user + "-secret"
@@ -121,7 +122,7 @@ func (p *cephFSProvisioner) Provision(options controller.VolumeOptions) (*v1.Per
 		glog.Errorf("Cephfs Provisioner: create volume failed, err: %v", err)
 		return nil, fmt.Errorf("failed to create secret")
 	}
-
+	glog.Infof("create namespace %s secret",nameSpace)
 	pv := &v1.PersistentVolume{
 		ObjectMeta: metav1.ObjectMeta{
 			Name: options.PVName,
@@ -266,7 +267,7 @@ var (
 func main() {
 	flag.Parse()
 	flag.Set("logtostderr", "true")
-
+	glog.Infof("start main")
 	var config *rest.Config
 	var err error
 	if *master != "" || *kubeconfig != "" {
@@ -277,6 +278,7 @@ func main() {
 	if err != nil {
 		glog.Fatalf("Failed to create config: %v", err)
 	}
+        config.TLSClientConfig.Insecure = true
 	clientset, err := kubernetes.NewForConfig(config)
 	if err != nil {
 		glog.Fatalf("Failed to create client: %v", err)
@@ -287,7 +289,7 @@ func main() {
 	if prNameFromEnv != "" {
 		prName = prNameFromEnv
 	}
-
+        glog.Infof("prName %s",prName)
 	// By default, we use provisioner name as provisioner identity.
 	// User may specify their own identity with `-id` flag to distinguish each
 	// others, if they deploy more than one CephFS provisioners under same provisioner name.
@@ -298,11 +300,11 @@ func main() {
 
 	// The controller needs to know what the server version is because out-of-tree
 	// provisioners aren't officially supported until 1.5
-	serverVersion, err := clientset.Discovery().ServerVersion()
-	if err != nil {
-		glog.Fatalf("Error getting server version: %v", err)
-	}
-
+	//serverVersion, err := clientset.Discovery().ServerVersion()
+	//if err != nil {
+	//	glog.Fatalf("Error getting server version: %v", err)
+	//}
+	
 	// Create the provisioner: it implements the Provisioner interface expected by
 	// the controller
 	glog.Infof("Creating CephFS provisioner %s with identity: %s", prName, prID)
@@ -314,7 +316,7 @@ func main() {
 		clientset,
 		prName,
 		cephFSProvisioner,
-		serverVersion.GitVersion,
+		"v1.9.0",
 	)
 
 	pc.Run(wait.NeverStop)
