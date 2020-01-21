@@ -12,13 +12,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM centos:7
+FROM registry-qcc.quantil.com/public/centos7-base-pod:1.0.16
 
-ENV CEPH_VERSION "mimic"
+ENV CEPH_VERSION "nautilus"
 RUN rpm --import 'https://download.ceph.com/keys/release.asc' && \
   rpm -Uvh https://download.ceph.com/rpm-$CEPH_VERSION/el7/noarch/ceph-release-1-1.el7.noarch.rpm && \
   yum install -y epel-release && \
-  yum install -y ceph-common python-cephfs && \
+  yum install -y ceph-common-14.2.0-0.el7 python-cephfs-14.2.0-0.el7 && \
   yum clean all
 
 COPY cephfs-provisioner /usr/local/bin/cephfs-provisioner

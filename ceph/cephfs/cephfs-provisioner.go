@@ -131,7 +131,7 @@ func (p *cephFSProvisioner) Provision(options controller.VolumeOptions) (*v1.Per
 		// create random share name
 		share = fmt.Sprintf("kubernetes-dynamic-pvc-%s", uuid.NewUUID())
 		// create random user id
-		user = fmt.Sprintf("kubernetes-dynamic-user-%s", uuid.NewUUID())
+		user = fmt.Sprintf("%s", uuid.NewUUID())
 	}
 	// provision share
 	// create cmd
@@ -155,7 +155,8 @@ func (p *cephFSProvisioner) Provision(options controller.VolumeOptions) (*v1.Per
 	if *disableCephNamespaceIsolation {
 		cmd.Env = append(cmd.Env, "CEPH_NAMESPACE_ISOLATION_DISABLED=true")
 	}
-
+	klog.Infof("%s", cmd.Args)
+	klog.Infof("%s", cmd.Env)
 	output, cmdErr := cmd.CombinedOutput()
 	if cmdErr != nil {
 		klog.Errorf("failed to provision share %q for %q, err: %v, output: %v", share, user, cmdErr, string(output))
@@ -396,6 +397,7 @@ func main() {
 	} else {
 		config, err = rest.InClusterConfig()
 	}
+	config.TLSClientConfig.Insecure = true
 	if err != nil {
 		klog.Fatalf("Failed to create config: %v", err)
 	}

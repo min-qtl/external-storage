@@ -13,11 +13,11 @@
 # limitations under the License.
 
 ifeq ($(REGISTRY),)
-	REGISTRY = quay.io/external_storage/
+	REGISTRY = registry-qcc.quantil.com/qcc/
 endif
 
 ifeq ($(VERSION),)
-	VERSION = latest
+	VERSION = v1.2
 endif
 
 IMAGE = $(REGISTRY)cephfs-provisioner:$(VERSION)
