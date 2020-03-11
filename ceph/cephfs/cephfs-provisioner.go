@@ -394,10 +394,11 @@ func main() {
 	var err error
 	if *master != "" || *kubeconfig != "" {
 		config, err = clientcmd.BuildConfigFromFlags(*master, *kubeconfig)
+		config.TLSClientConfig.Insecure = true
 	} else {
 		config, err = rest.InClusterConfig()
 	}
-	config.TLSClientConfig.Insecure = true
+
 	if err != nil {
 		klog.Fatalf("Failed to create config: %v", err)
 	}
